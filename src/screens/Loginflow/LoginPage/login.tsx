@@ -27,7 +27,7 @@ function Home() {
         },
       ]}>
       <SafeAreaView>
-        <View style={[{alignItems: 'center', paddingTop: verticalScale(170)}]}>
+        <View style={[{alignItems: 'center', paddingTop: '45%'}]}>
           <Text
             style={[
               {
@@ -51,7 +51,7 @@ function Home() {
 
           <View
             style={{
-              marginTop: verticalScale(60),
+              marginTop: '10%',
             }}>
             <View
               style={{
@@ -82,7 +82,7 @@ function Home() {
 
           <View
             style={{
-              marginTop: verticalScale(10),
+              marginTop: '3%',
             }}>
             <View
               style={{
@@ -151,7 +151,7 @@ function Home() {
             </Text>
           </TouchableOpacity>
 
-          <View style={{flexDirection: 'row', marginTop: moderateScale(15)}}>
+          <View style={{flexDirection: 'row', marginTop: '10%'}}>
             <Text
               style={{
                 color: '#63C596',
@@ -175,7 +175,7 @@ function Home() {
           <View
             style={{
               marginHorizontal: scale(20),
-              marginTop: verticalScale(60),
+              marginTop: '20%',
             }}>
             <Text
               style={{
