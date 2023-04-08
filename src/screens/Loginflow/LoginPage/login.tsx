@@ -7,6 +7,11 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
 import {Input} from 'react-native-elements';
 import FontFamily from '../../../../assets/CommonStyle/index';
 import {scale, verticalScale, moderateScale} from 'react-native-size-matters';
@@ -22,12 +27,13 @@ function Home() {
         },
       ]}>
       <SafeAreaView>
-        <View style={[{alignItems: 'center', paddingTop: moderateScale(200)}]}>
+        <View
+          style={[{alignItems: 'center', paddingTop: responsiveHeight(25)}]}>
           <Text
             style={[
               {
                 color: '#000000',
-                fontSize: 40,
+                fontSize: responsiveFontSize(5),
                 fontFamily: FontFamily.regular,
               },
             ]}>
@@ -37,7 +43,7 @@ function Home() {
             style={[
               {
                 color: '#000000',
-                fontSize: 40,
+                fontSize: responsiveFontSize(5),
                 fontFamily: FontFamily.regular,
               },
             ]}>
@@ -46,29 +52,29 @@ function Home() {
 
           <View
             style={{
-              marginTop: moderateScale(80),
+              marginTop: responsiveHeight(10),
             }}>
             <View
               style={{
                 flexDirection: 'row',
-                marginLeft: moderateScale(50),
+                marginLeft: responsiveWidth(14),
               }}>
               <Image
                 source={require('../../../../assets/image/icons/icon_person.png')}
                 style={{
-                  width: moderateScale(40),
-                  height: moderateScale(40),
-                  marginTop: moderateScale(-15),
-                  marginRight: moderateScale(-8),
+                  width: responsiveWidth(10),
+                  height: responsiveHeight(5),
+                  marginTop: responsiveHeight(-1.5),
+                  marginRight: responsiveWidth(-2),
                 }}
               />
               <Input
                 placeholder="Email or Phone number"
                 inputContainerStyle={{
-                  width: moderateScale(230),
-                  height: moderateScale(20),
+                  width: responsiveWidth(62),
+                  height: responsiveHeight(3),
                   borderColor: '#63C596',
-                  borderBottomWidth: 3,
+                  borderBottomWidth: responsiveWidth(0.7),
                 }}
                 inputStyle={{fontFamily: FontFamily.regular}}
               />
@@ -77,29 +83,29 @@ function Home() {
 
           <View
             style={{
-              marginTop: moderateScale(10),
+              marginTop: responsiveHeight(1),
             }}>
             <View
               style={{
                 flexDirection: 'row',
-                marginLeft: moderateScale(50),
+                marginLeft: responsiveWidth(14),
               }}>
               <Image
                 source={require('../../../../assets/image/icons/icon_lock.png')}
                 style={{
-                  width: moderateScale(40),
-                  height: moderateScale(40),
-                  marginTop: moderateScale(-15),
-                  marginRight: moderateScale(-8),
+                  width: responsiveWidth(10),
+                  height: responsiveHeight(5),
+                  marginTop: responsiveHeight(-1.5),
+                  marginRight: responsiveWidth(-2),
                 }}
               />
               <Input
                 placeholder="Password"
                 inputContainerStyle={{
-                  width: moderateScale(230),
-                  height: moderateScale(20),
+                  width: responsiveWidth(62),
+                  height: responsiveHeight(3),
                   borderColor: '#63C596',
-                  borderBottomWidth: 3,
+                  borderBottomWidth: responsiveWidth(0.7),
                 }}
                 inputStyle={{fontFamily: FontFamily.regular}}
               />
@@ -109,16 +115,16 @@ function Home() {
           <TouchableOpacity
             style={{
               backgroundColor: '#63C596',
-              borderRadius: moderateScale(13),
+              borderRadius: responsiveWidth(3),
               marginTop: moderateScale(15),
               elevation: 8,
             }}>
             <Text
               style={{
-                marginHorizontal: moderateScale(104),
+                marginHorizontal: responsiveWidth(29),
                 marginVertical: moderateScale(4),
                 color: '#ffffff',
-                fontSize: moderateScale(18),
+                fontSize: responsiveFontSize(2.4),
                 fontFamily: FontFamily.medium,
               }}>
               Sign In
