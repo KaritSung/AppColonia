@@ -15,9 +15,4 @@ module.exports = {
       },
     }),
   },
-  resolver: {
-    alias: {
-      assets: path.resolve(__dirname, 'src/assets'),
-    },
-  },
 };

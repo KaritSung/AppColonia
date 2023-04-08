@@ -54,7 +54,7 @@ function Home() {
                 marginLeft: moderateScale(50),
               }}>
               <Image
-                source={require('assets/image/icons/icon_person.png')}
+                source={require('../../../../assets/image/icons/icon_person.png')}
                 style={{
                   width: moderateScale(40),
                   height: moderateScale(40),
@@ -85,7 +85,7 @@ function Home() {
                 marginLeft: moderateScale(50),
               }}>
               <Image
-                source={require('assets/image/icons/icon_lock.png')}
+                source={require('../../../../assets/image/icons/icon_lock.png')}
                 style={{
                   width: moderateScale(40),
                   height: moderateScale(40),
