@@ -4,6 +4,7 @@
  *
  * @format
  */
+const path = require('path');
 
 module.exports = {
   transformer: {
@@ -13,5 +14,10 @@ module.exports = {
         inlineRequires: true,
       },
     }),
+  },
+  resolver: {
+    alias: {
+      assets: path.resolve(__dirname, 'src/assets'),
+    },
   },
 };
