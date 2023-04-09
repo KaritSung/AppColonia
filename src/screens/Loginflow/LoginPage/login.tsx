@@ -15,7 +15,10 @@ import {
   moderateScale,
   s,
 } from 'react-native-size-matters';
-
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 function Home() {
   const [text, onChangeText] = React.useState('Useless Text');
   return (
@@ -26,7 +29,7 @@ function Home() {
           flex: 1,
         },
       ]}>
-      <SafeAreaView>
+      {/* <SafeAreaView>
         <View style={[{alignItems: 'center', paddingTop: '45%'}]}>
           <Text
             style={[
@@ -197,7 +200,23 @@ function Home() {
             </Text>
           </View>
         </View>
-      </SafeAreaView>
+      </SafeAreaView> */}
+      <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            height: hp('10%'),
+            width: wp('20%'),
+            marginTop: hp('5%'),
+            backgroundColor: 'red',
+          }}></View>
+        <View
+          style={{
+            height: hp('10%'),
+            width: wp('20%'),
+            marginTop: hp('65%'),
+            backgroundColor: 'blue',
+          }}></View>
+      </View>
     </View>
   );
 }
