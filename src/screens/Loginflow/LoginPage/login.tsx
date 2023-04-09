@@ -29,13 +29,13 @@ function Home() {
           flex: 1,
         },
       ]}>
-      {/* <SafeAreaView>
-        <View style={[{alignItems: 'center', paddingTop: '45%'}]}>
+      <SafeAreaView>
+        <View style={[{alignItems: 'center', paddingTop: hp('25%')}]}>
           <Text
             style={[
               {
                 color: '#000000',
-                fontSize: moderateScale(40),
+                fontSize: hp('5%'),
                 fontFamily: FontFamily.regular,
               },
             ]}>
@@ -45,7 +45,7 @@ function Home() {
             style={[
               {
                 color: '#000000',
-                fontSize: moderateScale(40),
+                fontSize: hp('5%'),
                 fontFamily: FontFamily.regular,
               },
             ]}>
@@ -54,29 +54,29 @@ function Home() {
 
           <View
             style={{
-              marginTop: '10%',
+              marginTop: hp('5%'),
             }}>
             <View
               style={{
                 flexDirection: 'row',
-                marginLeft: scale(50),
+                marginLeft: wp('14%'),
               }}>
               <Image
                 source={require('../../../../assets/image/icons/icon_person.png')}
                 style={{
-                  width: scale(40),
-                  height: verticalScale(40),
-                  marginTop: verticalScale(-15),
-                  marginRight: scale(-8),
+                  width: wp('10%'),
+                  height: hp('6%'),
+                  marginTop: hp('-2%'),
+                  marginRight: wp('-2%'),
                 }}
               />
               <Input
                 placeholder="Email or Phone number"
                 inputContainerStyle={{
-                  width: scale(230),
-                  height: verticalScale(20),
+                  width: wp('66%'),
+                  height: hp('3%'),
                   borderColor: '#63C596',
-                  borderBottomWidth: moderateScale(3),
+                  borderBottomWidth: hp('0.4%'),
                 }}
                 inputStyle={{fontFamily: FontFamily.regular}}
               />
@@ -85,29 +85,29 @@ function Home() {
 
           <View
             style={{
-              marginTop: '3%',
+              marginTop: hp('1%'),
             }}>
             <View
               style={{
                 flexDirection: 'row',
-                marginLeft: scale(50),
+                marginLeft: wp('14%'),
               }}>
               <Image
                 source={require('../../../../assets/image/icons/icon_lock.png')}
                 style={{
-                  width: scale(40),
-                  height: verticalScale(40),
-                  marginTop: verticalScale(-15),
-                  marginRight: scale(-8),
+                  width: wp('10%'),
+                  height: hp('6%'),
+                  marginTop: hp('-2%'),
+                  marginRight: wp('-2%'),
                 }}
               />
               <Input
                 placeholder="Password"
                 inputContainerStyle={{
-                  width: scale(230),
-                  height: verticalScale(20),
+                  width: wp('66%'),
+                  height: hp('3%'),
                   borderColor: '#63C596',
-                  borderBottomWidth: moderateScale(3),
+                  borderBottomWidth: hp('0.4%'),
                 }}
                 inputStyle={{fontFamily: FontFamily.regular}}
               />
@@ -117,16 +117,16 @@ function Home() {
           <TouchableOpacity
             style={{
               backgroundColor: '#63C596',
-              borderRadius: moderateScale(13),
-              marginTop: verticalScale(15),
+              borderRadius: wp('3%'),
+              marginTop: wp('5%'),
               elevation: 8,
             }}>
             <Text
               style={{
-                marginHorizontal: scale(104),
-                marginVertical: verticalScale(4),
+                marginHorizontal: wp('30%'),
+                marginVertical: hp('0.7%'),
                 color: '#ffffff',
-                fontSize: moderateScale(18),
+                fontSize: hp('2.4%'),
                 fontFamily: FontFamily.medium,
               }}>
               Sign In
@@ -137,28 +137,28 @@ function Home() {
             style={{
               backgroundColor: '#F9F9F9',
               borderColor: '#63C596',
-              marginTop: verticalScale(20),
+              marginTop: hp('3%'),
               borderWidth: 2,
-              borderRadius: moderateScale(13),
+              borderRadius: wp('3%'),
               elevation: 8,
             }}>
             <Text
               style={{
-                marginHorizontal: scale(104),
-                marginVertical: verticalScale(4),
+                marginHorizontal: wp('30%'),
+                marginVertical: hp('0.7%'),
                 color: '#63C596',
-                fontSize: moderateScale(18),
+                fontSize: hp('2.4%'),
                 fontFamily: FontFamily.medium,
               }}>
               Sign Up
             </Text>
           </TouchableOpacity>
 
-          <View style={{flexDirection: 'row', marginTop: '10%'}}>
+          <View style={{flexDirection: 'row', marginTop: hp('2%')}}>
             <Text
               style={{
                 color: '#63C596',
-                fontSize: moderateScale(14),
+                fontSize: hp('1.8%'),
                 fontFamily: FontFamily.medium,
               }}>
               {' Forgot your '}
@@ -167,7 +167,7 @@ function Home() {
               <Text
                 style={{
                   color: '#63C596',
-                  fontSize: moderateScale(14),
+                  fontSize: hp('1.8%'),
                   fontFamily: FontFamily.bold,
                 }}>
                 password?
@@ -177,46 +177,30 @@ function Home() {
 
           <View
             style={{
-              marginHorizontal: scale(20),
-              marginTop: '20%',
+              marginHorizontal: wp('10%'),
+              marginTop: hp('12%'),
             }}>
             <Text
               style={{
                 color: '#63C596',
-                fontSize: moderateScale(12),
-                fontFamily: FontFamily.regular,
+                fontSize: hp('1.6%'),
+                fontFamily: FontFamily.bold,
               }}>
               {"By continuing, you agree to Colonia's Terms of"}
             </Text>
             <Text
               style={{
                 color: '#63C596',
-                fontSize: moderateScale(12),
-                fontFamily: FontFamily.regular,
+                fontSize: hp('1.6%'),
+                fontFamily: FontFamily.bold,
                 textAlign: 'center',
-                lineHeight: moderateScale(15),
+                lineHeight: hp('2%'),
               }}>
               {'Service, Privacy Policy'}
             </Text>
           </View>
         </View>
-      </SafeAreaView> */}
-      <View style={{alignItems: 'center'}}>
-        <View
-          style={{
-            height: hp('10%'),
-            width: wp('20%'),
-            marginTop: hp('5%'),
-            backgroundColor: 'red',
-          }}></View>
-        <View
-          style={{
-            height: hp('10%'),
-            width: wp('20%'),
-            marginTop: hp('65%'),
-            backgroundColor: 'blue',
-          }}></View>
-      </View>
+      </SafeAreaView>
     </View>
   );
 }
