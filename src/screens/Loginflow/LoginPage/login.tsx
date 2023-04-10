@@ -19,7 +19,8 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-function Home() {
+function Home({navigation}: {navigation: any}) {
+  //const navigation = useNavigation<any>();
   const [text, onChangeText] = React.useState('Useless Text');
   return (
     <View
@@ -39,7 +40,7 @@ function Home() {
                 fontFamily: FontFamily.regular,
               },
             ]}>
-            {'IMG LOGO'}
+            {'COLONIA'}
           </Text>
           <Text
             style={[
@@ -74,7 +75,7 @@ function Home() {
                 placeholder="Email or Phone number"
                 inputContainerStyle={{
                   width: wp('66%'),
-                  height: hp('3%'),
+                  height: hp('3.5%'),
                   borderColor: '#63C596',
                   borderBottomWidth: hp('0.4%'),
                 }}
@@ -105,7 +106,7 @@ function Home() {
                 placeholder="Password"
                 inputContainerStyle={{
                   width: wp('66%'),
-                  height: hp('3%'),
+                  height: hp('3.5%'),
                   borderColor: '#63C596',
                   borderBottomWidth: hp('0.4%'),
                 }}
@@ -134,6 +135,9 @@ function Home() {
           </TouchableOpacity>
 
           <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Terms');
+            }}
             style={{
               backgroundColor: '#F9F9F9',
               borderColor: '#63C596',
@@ -183,16 +187,16 @@ function Home() {
             <Text
               style={{
                 color: '#63C596',
-                fontSize: hp('1.6%'),
-                fontFamily: FontFamily.bold,
+                fontSize: hp('1.5%'),
+                fontFamily: FontFamily.regular,
               }}>
               {"By continuing, you agree to Colonia's Terms of"}
             </Text>
             <Text
               style={{
                 color: '#63C596',
-                fontSize: hp('1.6%'),
-                fontFamily: FontFamily.bold,
+                fontSize: hp('1.5%'),
+                fontFamily: FontFamily.regular,
                 textAlign: 'center',
                 lineHeight: hp('2%'),
               }}>
