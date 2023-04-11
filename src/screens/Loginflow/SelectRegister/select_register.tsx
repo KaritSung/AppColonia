@@ -20,6 +20,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import CNHeader from '../../common/component/CNHeader';
 function SelectRegister({navigation}: {navigation: any}) {
   return (
     <View
@@ -29,31 +30,7 @@ function SelectRegister({navigation}: {navigation: any}) {
           flex: 1,
         },
       ]}>
-      <View
-        style={{
-          flexDirection: 'column',
-        }}>
-        <View
-          style={{
-            marginTop: hp('6.8%'),
-            backgroundColor: '#63DAA1',
-            height: hp('6.1%'),
-            width: wp('100%'),
-            borderColor: '#63C596',
-            borderBottomWidth: hp('0.6%'),
-          }}>
-          <View style={{alignItems: 'center', marginTop: hp('0.2%')}}>
-            <Text
-              style={{
-                color: '#ffffff',
-                fontSize: hp('4.1%'),
-                fontFamily: FontFamily.bold,
-              }}>
-              Register
-            </Text>
-          </View>
-        </View>
-      </View>
+      <CNHeader title={'Register'} />
       <View style={{marginTop: hp('8%'), marginLeft: wp('10%')}}>
         <Text
           style={{
@@ -75,7 +52,11 @@ function SelectRegister({navigation}: {navigation: any}) {
         </Text>
       </View>
       <TouchableOpacity
-        onPress={() => {}}
+        onPress={() => {
+          navigation.navigate('RegisterForm', {
+            create_by: 'Email',
+          });
+        }}
         style={{
           backgroundColor: '#63DAA1',
           marginHorizontal: wp('15%'),
@@ -111,7 +92,11 @@ function SelectRegister({navigation}: {navigation: any}) {
         </View>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => {}}
+        onPress={() => {
+          navigation.navigate('RegisterForm', {
+            create_by: 'Phone number',
+          });
+        }}
         style={{
           backgroundColor: '#63DAA1',
           marginHorizontal: wp('15%'),

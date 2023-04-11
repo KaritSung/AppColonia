@@ -20,6 +20,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import CNHeadder from '../../common/component/CNHeader';
 function Terms({navigation}: {navigation: any}) {
   return (
     <View
@@ -34,26 +35,7 @@ function Terms({navigation}: {navigation: any}) {
         style={{
           flexDirection: 'column',
         }}>
-        <View
-          style={{
-            marginTop: hp('6.8%'),
-            backgroundColor: '#63DAA1',
-            height: hp('6.1%'),
-            width: wp('100%'),
-            borderColor: '#63C596',
-            borderBottomWidth: hp('0.6%'),
-          }}>
-          <View style={{alignItems: 'center', marginTop: hp('0.2%')}}>
-            <Text
-              style={{
-                color: '#ffffff',
-                fontSize: hp('4.1%'),
-                fontFamily: FontFamily.bold,
-              }}>
-              Terms of service
-            </Text>
-          </View>
-        </View>
+        <CNHeadder title={'Terms of service'} />
       </View>
       <View
         style={{
