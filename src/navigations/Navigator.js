@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import login from '../screens/Loginflow/LoginPage/login';
 import Terms from '../screens/Loginflow/Term/term';
 import SelectRegister from '../screens/Loginflow/SelectRegister/select_register'
+import RegisterForm from '../screens/Loginflow/RegisterForm/register_form';
 const Stack = createStackNavigator();
 
 function Navigator() {
@@ -15,6 +16,7 @@ function Navigator() {
       <Stack.Screen name="login" component={login} />
       <Stack.Screen name="Terms" component={Terms} />
       <Stack.Screen name="SelectRegister" component={SelectRegister} />
+      <Stack.Screen name="RegisterForm" component={RegisterForm} />
     </Stack.Navigator>
   );
 }

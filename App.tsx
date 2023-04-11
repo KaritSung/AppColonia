@@ -4,7 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import Navigator from './src/navigations/Navigator';
 import {Text} from 'react-native';
 import {Input} from 'react-native-elements';
-
+import {BackHandler} from 'react-native';
+import {useEffect} from 'react';
 interface TextWithDefaultProps extends Text {
   defaultProps?: {allowFontScaling?: boolean};
 }
@@ -20,6 +21,22 @@ Input.defaultProps = {
 };
 
 export default function App() {
+  useEffect(() => {
+    const backAction = () => {
+      // ตรวจสอบว่าต้องการปิดหรือไม่
+      // โดยใช้ Alert, Modal หรือ Custom Dialog
+
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction,
+    );
+
+    // คืนค่าฟังก์ชันที่เป็น unsubscribe เมื่อ component ถูก unmount
+    return () => backHandler.remove();
+  }, []);
   return (
     <NavigationContainer>
       <Navigator />
