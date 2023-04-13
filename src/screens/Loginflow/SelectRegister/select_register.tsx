@@ -91,7 +91,7 @@ function SelectRegister({navigation}: {navigation: any}) {
           </Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity
+      {/* <TouchableOpacity
         onPress={() => {
           navigation.navigate('RegisterForm', {
             create_by: 'Phone number',
@@ -130,7 +130,7 @@ function SelectRegister({navigation}: {navigation: any}) {
             Phone number
           </Text>
         </View>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
 
       <TouchableOpacity
         onPress={() => {
@@ -140,7 +140,7 @@ function SelectRegister({navigation}: {navigation: any}) {
           backgroundColor: '#F9F9F9',
           borderColor: '#63C596',
           marginHorizontal: wp('15%'),
-          marginTop: hp('35%'),
+          marginTop: hp('45%'),
           borderWidth: 2,
           borderRadius: wp('6%'),
           elevation: 8,
