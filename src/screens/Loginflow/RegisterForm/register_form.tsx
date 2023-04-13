@@ -27,6 +27,7 @@ function RegisterForm({navigation, route}: {navigation: any; route: any}) {
   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
   const [isCPasswordSecure, setIsCPasswordSecure] = useState(true);
   const {create_by} = route.params;
+
   const create_info = () => {
     if (create_by == 'Email') {
       return <Text> Email </Text>;
@@ -256,7 +257,7 @@ function RegisterForm({navigation, route}: {navigation: any; route: any}) {
 
         <TouchableOpacity
           onPress={() => {
-            // navigation.navigate('');
+            navigation.navigate('ConfirmEmail');
           }}
           style={{
             backgroundColor: '#63C596',
