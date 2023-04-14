@@ -167,7 +167,11 @@ function Home({navigation}: {navigation: any}) {
               }}>
               {' Forgot your '}
             </Text>
-            <TouchableOpacity style={{}}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('ForgetPassword', {create_by: 'Email'});
+              }}
+              style={{}}>
               <Text
                 style={{
                   color: '#63C596',

@@ -170,7 +170,9 @@ function Personal_Info({navigation, route}: {navigation: any; route: any}) {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => {}}
+            onPress={() => {
+              navigation.navigate('OTP');
+            }}
             style={{
               backgroundColor: '#63C596',
               borderRadius: wp('6%'),

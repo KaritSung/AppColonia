@@ -70,7 +70,11 @@ function Success({navigation, route}: {navigation: any; route: any}) {
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate(nextstep);
+            if (nextstep === 'root') {
+              navigation.popToTop();
+            } else {
+              navigation.navigate(nextstep);
+            }
           }}
           style={{
             backgroundColor: '#63C596',
