@@ -6,6 +6,7 @@ import {Text} from 'react-native';
 import {Input} from 'react-native-elements';
 import {BackHandler} from 'react-native';
 import {useEffect} from 'react';
+import SplashScreen from 'react-native-splash-screen';
 interface TextWithDefaultProps extends Text {
   defaultProps?: {allowFontScaling?: boolean};
 }
@@ -22,6 +23,7 @@ Input.defaultProps = {
 
 export default function App() {
   useEffect(() => {
+    SplashScreen.hide();
     const backAction = () => {
       // ตรวจสอบว่าต้องการปิดหรือไม่
       // โดยใช้ Alert, Modal หรือ Custom Dialog
