@@ -23,8 +23,11 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import CNHeader from '../../common/component/CNHeader';
-function ConfirmEmail({navigation, route}: {navigation: any; route: any}) {
-  const {Route} = route.params;
+function ForgetPassword({navigation, route}: {navigation: any; route: any}) {
+  const [isPasswordSecure, setIsPasswordSecure] = useState(true);
+  const [isCPasswordSecure, setIsCPasswordSecure] = useState(true);
+  const {create_by} = route.params;
+
   return (
     <View
       style={[
@@ -33,70 +36,75 @@ function ConfirmEmail({navigation, route}: {navigation: any; route: any}) {
           flex: 1,
         },
       ]}>
-      <CNHeader title={'Confirm your Email'} />
-      <View
-        style={{
-          alignItems: 'center',
-        }}>
-        <Image
-          source={require('../../../../assets/image/icons/icon_email_big.png')}
-          style={{
-            marginTop: hp('10%'),
-            width: scale(200),
-            height: verticalScale(195),
-          }}
-        />
+      <CNHeader title={'Forget Password'} />
+      <View style={{marginTop: hp('10%'), marginLeft: wp('10%')}}>
         <Text
           style={{
-            marginTop: hp('0.5%'),
             color: '#63C596',
-            fontSize: moderateScale(22),
-            letterSpacing: -0.025,
+            fontSize: hp('5.5%'),
             fontFamily: FontFamily.bold,
           }}>
-          Please! confirm your Email
+          Fill in
         </Text>
         <Text
           style={{
-            marginTop: hp('0.5%'),
+            marginLeft: wp('2%'),
             color: '#63C596',
-            fontSize: moderateScale(18),
-            letterSpacing: -0.025,
-            lineHeight: hp('3.4%'),
-            fontFamily: FontFamily.regular,
-            textAlign: 'center',
+            fontSize: hp('2%'),
+            lineHeight: hp('2.2%'),
+            fontFamily: FontFamily.bold,
           }}>
-          <Text>{'We’ve sent an email to\n'}</Text>
-          <Text style={{fontWeight: '700'}}>{'dev.colonia@gmail.com\n'}</Text>
-          <Text>{'for verify your email address'}</Text>
+          {
+            'Information Email or Phone number \nfor sending verification messages.'
+          }
         </Text>
+      </View>
+      <View
+        style={{
+          flexDirection: 'row',
+          marginLeft: wp('14%'),
+          marginTop: hp('4%'),
+        }}>
+        <Image
+          source={require('../../../../assets/image/icons/icon_person.png')}
+          style={{
+            width: wp('8%'),
+            height: hp('5%'),
+            marginTop: hp('-1%'),
+            marginRight: wp('-2%'),
+          }}
+        />
+        <Input
+          placeholder="Email or Phone number"
+          inputContainerStyle={{
+            width: wp('66%'),
+            height: hp('3.5%'),
+            borderColor: '#63C596',
+            borderBottomWidth: hp('0.4%'),
+          }}
+          inputStyle={{fontFamily: FontFamily.regular}}
+        />
+      </View>
+      <View style={{alignItems: 'center'}}>
         <TouchableOpacity
           onPress={() => {
-            if (Route === 'Forget') {
-              navigation.navigate('ChangePassword');
-            } else {
-              navigation.navigate('Success', {
-                header: 'Verified',
-                title: 'Verification success',
-                nextstep: 'Personal_Info',
-              });
-            }
+            navigation.navigate('ConfirmEmail', {Route: 'Forget'});
           }}
           style={{
             backgroundColor: '#63C596',
             borderRadius: wp('6%'),
-            marginTop: wp('23%'),
+            marginTop: wp('65%'),
             elevation: 8,
           }}>
           <Text
             style={{
-              marginHorizontal: wp('10%'),
+              marginHorizontal: wp('22%'),
               marginVertical: hp('0.7%'),
               color: '#ffffff',
               fontSize: hp('3%'),
               fontFamily: FontFamily.medium,
             }}>
-            Resend Email
+            Next
           </Text>
         </TouchableOpacity>
 
@@ -127,4 +135,4 @@ function ConfirmEmail({navigation, route}: {navigation: any; route: any}) {
     </View>
   );
 }
-export default ConfirmEmail;
+export default ForgetPassword;

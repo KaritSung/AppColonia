@@ -35,55 +35,55 @@ function CNGender({Style}) {
         <View style={{flexDirection: 'row'}}>
           <CheckBox
             title={'Male'}
-            containerStyle={{width: 90}}
+            containerStyle={{width: 90,backgroundColor:'#ffffff'}}
             checked={selectedIndex === 0}
             onPress={() => setIndex(0)}
             checkedIcon={
               <Image
                 source={require('../../../../assets/image/icons/radio_Checked.png')}
-                style={{width: 10, height: 10}}
+                style={{width: 15, height: 15}}
               />
             }
             uncheckedIcon={
               <Image
                 source={require('../../../../assets/image/icons/radio_Unchecked.png')}
-                style={{width: 10, height: 10}}
+                style={{width: 15, height: 15}}
               />
             }
           ></CheckBox>
           <CheckBox
             title={'Female'}
-            containerStyle={{marginLeft: moderateScale(-1), width: 90}}
+            containerStyle={{marginLeft: moderateScale(-1), width: 90,backgroundColor:'#ffffff'}}
             checked={selectedIndex === 1}
             onPress={() => setIndex(1)}
             checkedIcon={
               <Image
                 source={require('../../../../assets/image/icons/radio_Checked.png')}
-                style={{width: 10, height: 10}}
+                style={{width: 15, height: 15}}
               />
             }
             uncheckedIcon={
               <Image
                 source={require('../../../../assets/image/icons/radio_Unchecked.png')}
-                style={{width: 10, height: 10}}
+                style={{width: 15, height: 15}}
               />
             }
           />
           <CheckBox
             title={'Other'}
-            containerStyle={{marginLeft: moderateScale(-1), width: 90}}
+            containerStyle={{marginLeft: moderateScale(-1), width: 90,backgroundColor:'#ffffff'}}
             checked={selectedIndex === 2}
             onPress={() => setIndex(2)}
             checkedIcon={
               <Image
                 source={require('../../../../assets/image/icons/radio_Checked.png')}
-                style={{width: 10, height: 10}}
+                style={{width: 15, height: 15}}
               />
             }
             uncheckedIcon={
               <Image
                 source={require('../../../../assets/image/icons/radio_Unchecked.png')}
-                style={{width: 10, height: 10}}
+                style={{width: 15, height: 15}}
               />
             }
           />
