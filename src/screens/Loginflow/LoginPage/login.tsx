@@ -35,7 +35,7 @@ function Home({navigation}: {navigation: any}) {
           <Text
             style={[
               {
-                color: '#000000',
+                color: '#63C596',
                 fontSize: hp('5%'),
                 fontFamily: FontFamily.regular,
               },
@@ -45,7 +45,7 @@ function Home({navigation}: {navigation: any}) {
           <Text
             style={[
               {
-                color: '#000000',
+                color: '#63C596',
                 fontSize: hp('5%'),
                 fontFamily: FontFamily.regular,
               },
